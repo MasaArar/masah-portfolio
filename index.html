@@ -12,6 +12,28 @@
 <meta property="og:title" content="Masah Arar | AI assistants, dashboards and websites">
 <meta property="og:description" content="Bilingual AI assistants, n8n automation, dashboards and websites for UAE businesses.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Masah Arar","url":"https://masaharar.com/","jobTitle":"Data and AI consultant","email":"masaarar6@gmail.com","telephone":"+971504383886","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"knowsLanguage":["en","ar"],"sameAs":["https://www.linkedin.com/in/masah-arar"]}</script>
+<script>
+  /* Google Analytics 4. Empty GA_ID means analytics is off. */
+  var GA_ID = 'G-WTLG80LX90';
+  if (/^G-[A-Z0-9]{6,}$/.test(GA_ID)) {
+    var gs = document.createElement('script'); gs.async = true; gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(gs);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', GA_ID);
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a,button'); if (!a) return;
+      var h = a.getAttribute('href') || '';
+      if (h.indexOf('tel:') === 0) gtag('event', 'click_phone');
+      else if (h.indexOf('mailto:') === 0) gtag('event', 'click_email');
+      else if (h.indexOf('linkedin.com') > -1) gtag('event', 'click_linkedin');
+      else if (a.id === 'copyBtn') gtag('event', 'copy_email');
+    });
+    document.addEventListener('play', function (e) {
+      if (e.target.tagName === 'VIDEO') gtag('event', 'video_play', { video: (e.target.getAttribute('src') || '').split('/').pop() });
+    }, true);
+  }
+</script>
 <title>Masah Arar | AI assistants, dashboards and websites in Dubai</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
@@ -223,33 +245,11 @@
   .faq details:last-child { border-bottom: 1px solid var(--line); }
   .faq summary { min-height: 44px; display: flex; align-items: center; padding-block: 8px; cursor: pointer; font-weight: 600; list-style-position: inside; }
   .faq summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-  .faq details p { padding: 0 0 14px
-<script>
-  /* Google Analytics 4. Paste the Measurement ID (looks like G-ABCDE12345) between the quotes. Empty means analytics is off. */
-  var GA_ID = '';
-  if (/^G-[A-Z0-9]{6,}$/.test(GA_ID)) {
-    var gs = document.createElement('script'); gs.async = true; gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(gs);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { dataLayer.push(arguments); };
-    gtag('js', new Date()); gtag('config', GA_ID);
-    document.addEventListener('click', function (e) {
-      var a = e.target.closest('a,button'); if (!a) return;
-      var h = a.getAttribute('href') || '';
-      if (h.indexOf('tel:') === 0) gtag('event', 'click_phone');
-      else if (h.indexOf('mailto:') === 0) gtag('event', 'click_email');
-      else if (h.indexOf('linkedin.com') > -1) gtag('event', 'click_linkedin');
-      else if (a.id === 'copyBtn') gtag('event', 'copy_email');
-    });
-    document.addEventListener('play', function (e) {
-      if (e.target.tagName === 'VIDEO') gtag('event', 'video_play', { video: (e.target.getAttribute('src') || '').split('/').pop() });
-    }, true);
-  }
-</script>
+  .faq details p { padding: 0 0 14px; color: var(--muted); max-width: 62ch; }
+</style>
 </head>
 <body>
-; color: var(--muted); max-width: 62ch; }
-</style>
+
 
 <div id="app" lang="en" dir="ltr">
   <a class="skip" href="#main" data-k="skip">Skip to content</a>
@@ -479,6 +479,7 @@
 
   <div class="progress" id="progress" aria-hidden="true"></div>
     <footer class="foot" data-k="foot">Masah Arar, Dubai, UAE</footer>
+    <p class="foot" data-k="privacy" style="margin-top:-8px;font-size:13px">This site uses Google Analytics to count visits. No personal details are collected.</p>
   </div>
 </div>
 
@@ -560,6 +561,7 @@
       f3q: 'What do you need to start?', f3a: 'A few lines about your business and the problem. We agree the goal and scope on a short call.',
       f4q: 'Which cloud do you build on?', f4a: 'Azure or Google Cloud. If your team already uses one, I build there.',
       foot: 'Masah Arar, Dubai, UAE',
+      privacy: 'This site uses Google Analytics to count visits. No personal details are collected.',
     },
     ar: {
       skip: 'انتقل إلى المحتوى',
@@ -637,6 +639,7 @@
       f3q: 'ماذا تحتاج لتبدأ؟', f3a: 'بضعة أسطر عن عملك والمشكلة. نتفق على الهدف والنطاق في مكالمة قصيرة.',
       f4q: 'على أي سحابة تبني؟', f4a: 'Azure أو Google Cloud. وإذا كان فريقك يستخدم إحداهما فأبني عليها.',
       foot: 'Masah Arar، دبي، الإمارات',
+      privacy: 'يستخدم هذا الموقع Google Analytics لحساب الزيارات. لا تُجمع أي بيانات شخصية.',
     }
   };
 
