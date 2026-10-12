@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Masah Arar builds bilingual AI assistants, workflow automation, dashboards and websites for UAE businesses. Dubai, English and Arabic.">
+<link rel="canonical" href="https://masaharar.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#6B6090">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://masaharar.com/">
+<meta property="og:title" content="Masah Arar | AI assistants, dashboards and websites">
+<meta property="og:description" content="Bilingual AI assistants, n8n automation, dashboards and websites for UAE businesses.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Masah Arar","url":"https://masaharar.com/","jobTitle":"Data and AI consultant","email":"masaarar6@gmail.com","telephone":"+971504383886","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"knowsLanguage":["en","ar"],"sameAs":["https://www.linkedin.com/in/masah-arar"]}</script>
+<title>Masah Arar | AI assistants, dashboards and websites in Dubai</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a short hero that puts a live demo next to the headline, then headed sections with the heading in a left rail. */
+  :root {
+    --bg: #F6F4FB;
+    --surface: #FFFFFF;
+    --tint: #D4CDF4;        /* Periwinkle */
+    --ink: #2A1F23;
+    --muted: #685155;       /* Taupe Grey */
+    --line: #D4CDF4;        /* Periwinkle, dividers */
+    --edge: #8B85C1;        /* Soft Periwinkle, control borders */
+    --accent: #6B6090;      /* Vintage Lavender, deepened for text */
+    --btn: #6B6090;
+    --on-btn: #FFFFFF;
+    --lav: #7A6F9B;         /* Vintage Lavender, chart bars */
+    --rose: #815E5B;        /* Smoky Rose, highlight */
+    --good: #1B7A4B;
+    --warn: #B4452F;
+    --f-display: 'Bricolage Grotesque', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+    --f-body: 'IBM Plex Sans', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1C1517; --surface: #281E22; --tint: #33283A; --ink: #F1ECF6; --muted: #C4BBD6;
+      --line: #3A2E33; --edge: #8B85C1; --accent: #D4CDF4; --btn: #8B85C1; --on-btn: #1C1517;
+      --lav: #8B85C1; --rose: #C9A39D; --good: #4CC48A; --warn: #F08A72;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1C1517; --surface: #281E22; --tint: #33283A; --ink: #F1ECF6; --muted: #C4BBD6;
+    --line: #3A2E33; --edge: #8B85C1; --accent: #D4CDF4; --btn: #8B85C1; --on-btn: #1C1517;
+    --lav: #8B85C1; --rose: #C9A39D; --good: #4CC48A; --warn: #F08A72;
+    color-scheme: dark;
+  }
+
+  body { background: var(--bg); color: var(--ink); font: 400 16px/1.65 var(--f-body); }
+  * { box-sizing: border-box; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+
+  /* Interaction */
+  a, .btn, .lang, .seg button, .copy { transition: color .18s ease, border-color .18s ease, background-color .18s ease; }
+  .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .skip { position: absolute; inset-inline-start: 16px; top: -64px; z-index: 20; padding: 12px 18px; background: var(--btn); color: var(--on-btn); font-weight: 600; border-radius: 4px; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+  /* Header */
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+  .brand { font: 700 18px/1 var(--f-display); letter-spacing: -0.01em; }
+  .topnav { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+  .topnav a { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; padding-inline: 8px; }
+  .topnav a:hover { color: var(--accent); text-decoration: underline; }
+  .lang { font: 500 15px/1 var(--f-body); color: var(--ink); background: transparent; border: 1px solid var(--edge); border-radius: 4px; padding: 0 16px; min-height: 44px; cursor: pointer; }
+  .lang:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 40px 64px; align-items: center; }
+  @media (min-width: 940px) { .hero { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 56px; padding-block: 56px 80px; } }
+  .eyebrow { font-size: 15px; color: var(--muted); }
+  h1 { margin: 14px 0 0; font: 800 clamp(2.3rem, 5.6vw, 4.1rem)/1.03 var(--f-display); letter-spacing: -0.03em; text-wrap: balance; }
+  .lede { margin: 22px 0 0; max-width: 54ch; font-size: 18px; color: var(--muted); }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 4px; font: 600 15px/1.2 var(--f-body); text-decoration: none; border: 1px solid var(--accent); }
+  .btn.primary { background: var(--btn); color: var(--on-btn); border-color: var(--btn); }
+  .btn.ghost { color: var(--accent); background: transparent; }
+  .btn:hover { filter: brightness(1.1); }
+  .tools { margin-top: 28px; max-width: 54ch; font-size: 15px; color: var(--muted); }
+
+  .stage { min-width: 0; background: var(--tint); border: 1px solid var(--edge); border-radius: 8px; padding: 12px; }
+  .stage video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 4px; object-fit: contain; }
+  .stage-cap { display: grid; gap: 2px; padding: 12px 4px 4px; }
+  .stage-cap strong { font: 700 17px/1.3 var(--f-display); }
+  .stage-cap span { font-size: 15px; color: var(--muted); }
+
+  /* Sections: heading in the left rail on wide screens */
+  .sec { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 52px; border-top: 1px solid var(--line); }
+  @media (min-width: 860px) { .sec { grid-template-columns: 210px minmax(0, 1fr); gap: 48px; } }
+  h2 { margin: 0; font: 700 24px/1.2 var(--f-display); letter-spacing: -0.015em; text-wrap: balance; }
+  h3 { margin: 0; font: 700 19px/1.3 var(--f-display); letter-spacing: -0.01em; }
+  p { margin: 0; }
+
+  /* Services */
+  .svc { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 40px 44px; }
+  .svc p { margin-top: 8px; color: var(--muted); }
+  .svc .fit { margin-top: 10px; color: var(--ink); font-size: 15px; }
+
+  /* Demo videos */
+  .vids { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+  .vid { display: grid; gap: 8px; align-content: start; min-width: 0; }
+  .vid video { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 6px; border: 1px solid var(--edge); object-fit: contain; }
+  .vid h3 { font-size: 18px; margin-top: 4px; }
+  .vid p { color: var(--muted); font-size: 15px; }
+  .meta { font-size: 15px; color: var(--muted); }
+  .more { margin-top: 28px; font-size: 15px; color: var(--muted); }
+
+  /* Projects */
+  .proj { display: grid; gap: 8px; padding-block: 26px; border-top: 1px solid var(--line); min-width: 0; }
+  .proj:first-child { border-top: 0; padding-top: 0; }
+  .proj p { max-width: 64ch; color: var(--muted); }
+  .stack { font-size: 14px; color: var(--ink); }
+  .proj a { font-weight: 600; width: fit-content; }
+
+  /* Dashboard sample */
+  .panel { background: var(--surface); border: 1px solid var(--edge); border-radius: 8px; padding: 22px; min-width: 0; }
+  .panel-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+  .note { font-size: 15px; color: var(--muted); }
+  .seg { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .seg button { font: 500 15px/1 var(--f-body); color: var(--ink); background: transparent; border: 1px solid var(--edge); border-radius: 4px; padding: 0 16px; min-height: 44px; cursor: pointer; }
+  .seg button:hover { border-color: var(--accent); }
+  .seg button[aria-pressed="true"] { background: var(--btn); border-color: var(--btn); color: var(--on-btn); }
+  .board { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; margin-top: 22px; }
+  @media (min-width: 900px) { .board { grid-template-columns: 200px minmax(0, 1fr); gap: 36px; align-items: start; } }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 18px; }
+  @media (min-width: 900px) { .kpis { grid-template-columns: 1fr; } }
+  .kpi .k { font-size: 14px; color: var(--muted); }
+  .kpi .v { font: 700 30px/1.2 var(--f-display); font-variant-numeric: tabular-nums; }
+  .kpi .v small { font: 400 14px/1 var(--f-body); color: var(--muted); }
+  .kpi .v.up { color: var(--good); }
+  .kpi .v.down { color: var(--warn); }
+  .chart { min-width: 0; max-width: 640px; }
+  .chart-title { font-size: 15px; color: var(--muted); margin-bottom: 6px; }
+  .chart svg { display: block; width: 100%; height: auto; direction: ltr; }
+  .chart .grid { stroke: var(--line); stroke-width: 1; }
+  .chart .ax { fill: var(--muted); font: 400 12px var(--f-body); font-variant-numeric: tabular-nums; }
+  .chart .val { fill: var(--ink); font: 600 13px var(--f-body); font-variant-numeric: tabular-nums; }
+  .chart .bar { fill: var(--lav); }
+  .chart .bar.last { fill: var(--rose); }
+  .chart-cap { margin-top: 2px; text-align: center; font-size: 14px; color: var(--muted); max-width: 640px; }
+
+  /* Process: a real sequence */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 28px 24px; counter-reset: s; }
+  .steps li { counter-increment: s; }
+  .steps li::before { content: counter(s); display: block; font: 800 34px/1 var(--f-display); color: var(--accent); margin-bottom: 10px; }
+
+  /* About */
+  .about p { margin-bottom: 14px; max-width: 62ch; }
+  .about p.sub { color: var(--muted); }
+  .certs { list-style: none; margin: 8px 0 0; padding: 0; max-width: 520px; }
+  .certs li { padding-block: 10px; border-top: 1px solid var(--line); font-size: 15px; }
+  .certs li:last-child { border-bottom: 1px solid var(--line); }
+  .certs-h { margin-top: 26px; font: 700 17px/1.3 var(--f-display); }
+
+  /* Contact */
+  .contact p { margin-top: 10px; color: var(--muted); max-width: 54ch; }
+  .contact h3.big { font: 800 clamp(1.7rem, 3.6vw, 2.5rem)/1.1 var(--f-display); letter-spacing: -0.02em; text-wrap: balance; max-width: 22ch; }
+  .mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; }
+  .mail { font: 600 20px/1.3 var(--f-body); overflow-wrap: anywhere; direction: ltr; unicode-bidi: isolate; }
+  .copy { font: 600 15px/1 var(--f-body); color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 4px; padding: 0 18px; min-height: 44px; cursor: pointer; }
+  .copy:hover { filter: brightness(1.1); }
+  .li { margin-top: 16px; display: block; width: fit-content; font-weight: 600; }
+
+  .foot { border-top: 1px solid var(--line); padding-block: 26px 40px; font-size: 14px; color: var(--muted); }
+
+  /* Arabic */
+  [lang="ar"] h1 { letter-spacing: 0; line-height: 1.3; }
+  [lang="ar"] h2, [lang="ar"] h3, [lang="ar"] .contact h3.big { letter-spacing: 0; line-height: 1.45; }
+  [lang="ar"] { line-height: 1.85; }
+  [lang="ar"] .steps li::before { font-weight: 700; }
+
+  /* motion (only when the visitor has not asked for less) */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .rv { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .js .rv.in { opacity: 1; transform: none; }
+    .js .hero h1, .js .hero .lede, .js .hero .stage { animation: rise .7s ease both; }
+    .js .hero .lede { animation-delay: .12s; }
+    .js .hero .stage { animation-delay: .22s; }
+    .vid, .svc, .stage { transition: transform .25s ease, border-color .25s ease; }
+    .vid:hover, .svc:hover { transform: translateY(-3px); }
+    .chart .bar { transform-box: fill-box; transform-origin: bottom; animation: grow .7s ease both; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  }
+
+  .progress { position: fixed; inset-block-start: 0; inset-inline: 0; height: 3px; z-index: 60; background: var(--lav); transform-origin: left; transform: scaleX(0); pointer-events: none; }
+  [dir="rtl"] .progress { transform-origin: right; }
+  @media (prefers-reduced-motion: no-preference) {
+    .btn, .seg button, .nav a, .lang-btn, #copyBtn, #langBtn {
+      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease; }
+    .btn:hover, .seg button:hover, #copyBtn:hover, #langBtn:hover { transform: scale(1.06); }
+    .btn:active, .seg button:active, #copyBtn:active, #langBtn:active { transform: scale(.97); }
+    .btn.primary:hover { box-shadow: 0 8px 22px rgba(107,96,144,.45); }
+    .js .rv.from-l { transform: translateX(-28px); }
+    .js .rv.from-r { transform: translateX(28px); }
+    .js .rv.in { transition-delay: var(--d, 0s); }
+    .js .rv.in.from-l, .js .rv.in.from-r { transform: none; }
+    .js h2.rv { transform: translateY(10px) scale(.98); }
+    .js h2.rv.in { transform: none; }
+    .stage { will-change: transform; }
+  }
+
+  .probs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px 32px; }
+  .prob { border-inline-start: 3px solid var(--lav); padding-inline-start: 16px; }
+  .prob h3 { font: 700 19px/1.3 var(--f-display); }
+  .prob p { margin-top: 8px; color: var(--muted); }
+  .prob a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); font-weight: 600; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 20px; }
+  .stat { background: var(--tint); border-radius: 8px; padding: 22px; color: var(--ink); }
+  .stat .num { font: 800 clamp(36px, 6vw, 52px)/1 var(--f-display); color: var(--ink); }
+  .stat p { margin-top: 10px; color: var(--ink); font-size: 15px; }
+  .skgs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 28px 32px; }
+  .skg h3 { font: 700 17px/1.3 var(--f-display); margin-bottom: 10px; }
+  .skg ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .skg li { border: 1px solid var(--edge); border-radius: 999px; padding: 6px 12px; font-size: 14px; background: var(--surface); }
+  .faq details { border-top: 1px solid var(--line); }
+  .faq details:last-child { border-bottom: 1px solid var(--line); }
+  .faq summary { min-height: 44px; display: flex; align-items: center; padding-block: 8px; cursor: pointer; font-weight: 600; list-style-position: inside; }
+  .faq summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .faq details p { padding: 0 0 14px
+<script>
+  /* Google Analytics 4. Paste the Measurement ID (looks like G-ABCDE12345) between the quotes. Empty means analytics is off. */
+  var GA_ID = '';
+  if (/^G-[A-Z0-9]{6,}$/.test(GA_ID)) {
+    var gs = document.createElement('script'); gs.async = true; gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(gs);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', GA_ID);
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a,button'); if (!a) return;
+      var h = a.getAttribute('href') || '';
+      if (h.indexOf('tel:') === 0) gtag('event', 'click_phone');
+      else if (h.indexOf('mailto:') === 0) gtag('event', 'click_email');
+      else if (h.indexOf('linkedin.com') > -1) gtag('event', 'click_linkedin');
+      else if (a.id === 'copyBtn') gtag('event', 'copy_email');
+    });
+    document.addEventListener('play', function (e) {
+      if (e.target.tagName === 'VIDEO') gtag('event', 'video_play', { video: (e.target.getAttribute('src') || '').split('/').pop() });
+    }, true);
+  }
+</script>
+</head>
+<body>
+; color: var(--muted); max-width: 62ch; }
+</style>
+
+<div id="app" lang="en" dir="ltr">
+  <a class="skip" href="#main" data-k="skip">Skip to content</a>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">Masah Arar</div>
+      <nav class="topnav" aria-label="Main">
+        <a href="#work" data-k="nav_work">Work</a>
+        <a href="#contact" data-k="nav_contact">Contact</a>
+        <button class="lang" id="langBtn" type="button">العربية</button>
+      </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="h1">
+      <div>
+        <div class="eyebrow" data-k="eyebrow">Dubai, UAE. English and Arabic.</div>
+        <h1 id="h1" data-k="h1">AI assistants, dashboards and websites for UAE businesses.</h1>
+        <p class="lede" data-k="lede">I build working software: an assistant that answers customers in English and Arabic, a dashboard that shows owners what is happening, and a website that brings in leads.</p>
+        <div class="cta">
+          <a class="btn primary" href="#work" data-k="btn_work">See the work</a>
+          <a class="btn ghost" href="#contact" data-k="btn_contact">Get in touch</a>
+        </div>
+        <p class="tools" data-k="tools">Works with Azure, Google Cloud, Databricks, Power BI, Next.js, n8n and Supabase.</p>
+      </div>
+      <figure class="stage" style="margin:0">
+        <video controls preload="none" playsinline poster="clips/demo-part-2.jpg" src="clips/demo-part-2.mp4" aria-labelledby="stageT"></video>
+        <figcaption class="stage-cap">
+          <strong id="stageT" data-k="v4_t">Social media workflow in n8n</strong>
+          <span data-k="v4_d">An n8n workflow that drafts social posts with an AI model, asks for approval, then publishes to Instagram and Facebook.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="sec" id="problems" aria-labelledby="h-prob">
+      <h2 id="h-prob" data-k="lab_prob">Sound familiar?</h2>
+      <div class="probs">
+        <div class="prob"><h3 data-k="pr1_t">Customers message at night and nobody replies.</h3><p data-k="pr1_d">A bilingual AI assistant answers in English and Arabic around the clock and passes real leads to your team.</p><a href="#services" data-k="pr_link">See the fix</a></div>
+        <div class="prob"><h3 data-k="pr2_t">Your team copies the same data between tools every day.</h3><p data-k="pr2_d">An n8n workflow moves it for you and writes the result back into the tools you already use.</p><a href="#services" data-k="pr_link2">See the fix</a></div>
+        <div class="prob"><h3 data-k="pr3_t">You rebuild the same report by hand every week.</h3><p data-k="pr3_d">A dashboard puts sales, leads or operations on one screen that updates itself.</p><a href="#services" data-k="pr_link3">See the fix</a></div>
+        <div class="prob"><h3 data-k="pr4_t">Your website looks fine but brings no enquiries.</h3><p data-k="pr4_d">A fast bilingual site with a clear offer and lead capture turns visitors into messages.</p><a href="#services" data-k="pr_link4">See the fix</a></div>
+      </div>
+    </section>
+
+    <section class="sec" id="services" aria-labelledby="h-services">
+      <h2 id="h-services" data-k="lab_services">What I build</h2>
+      <div class="svc">
+        <div>
+          <h3 data-k="s1_t">Bilingual AI assistants</h3>
+          <p data-k="s1_d">Answer customer questions in English and Arabic on your website or WhatsApp, take bookings, and pass real leads to your team. Built on Azure AI Foundry, with answers cited from your own documents.</p>
+          <p class="fit" data-k="s1_f">Suits property agents, clinics, salons and restaurants.</p>
+        </div>
+        <div>
+          <h3 data-k="s2_t">Workflow automation with n8n</h3>
+          <p data-k="s2_d">Workflows that start when content, messages or form entries arrive, call an AI model, and write the result back into your tools, so nothing gets re-typed.</p>
+          <p class="fit" data-k="s2_f">Suits teams that copy the same data between tools every day.</p>
+        </div>
+        <div>
+          <h3 data-k="s3_t">Dashboards and reporting</h3>
+          <p data-k="s3_d">Power BI or web dashboards that bring sales, leads or operations data onto one screen your team can check each morning.</p>
+          <p class="fit" data-k="s3_f">Suits trading, logistics, retail and food and beverage.</p>
+        </div>
+        <div>
+          <h3 data-k="s4_t">Websites that bring in leads</h3>
+          <p data-k="s4_d">Fast bilingual websites with a clear offer, lead capture and search basics, deployed and handed over.</p>
+          <p class="fit" data-k="s4_f">Suits small firms that need a site that works.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="work" aria-labelledby="h-demos">
+      <h2 id="h-demos" data-k="lab_demos">Demo videos</h2>
+      <div>
+        <div class="vids">
+          <article class="vid">
+            <video controls preload="none" playsinline poster="clips/intra-connect.jpg" src="clips/intra-connect.mp4" aria-labelledby="t1"></video>
+            <h3 id="t1" data-k="v1_t">Intra-Connect marketing pipeline</h3>
+            <p data-k="v1_d">An enterprise assistant that runs a marketing pipeline from chat: it writes the post and image, waits for approval, then publishes.</p>
+            <div class="meta"><span data-k="v_clip">First 90 seconds.</span> <a href="https://drive.google.com/file/d/1Wapa6_bD_G9SSoooiS-J4c3PNJgGpya1/view?usp=drivesdk" target="_blank" rel="noopener" data-k="v_full">Watch the full video on Google Drive</a></div>
+          </article>
+          <article class="vid">
+            <video controls preload="none" playsinline poster="clips/vehicle-defect.jpg" src="clips/vehicle-defect.mp4" aria-labelledby="t2"></video>
+            <h3 id="t2" data-k="v5_t">Vehicle defect diagnosis agent</h3>
+            <p data-k="v5_d">Upload a photo of a damaged vehicle and get a diagnosis with cited fix steps, drawn from a document knowledge base.</p>
+            <div class="meta"><span data-k="v_clip">First 90 seconds.</span> <a href="https://drive.google.com/file/d/1ngLsgzyi9JQIkKWazzl97Q6yGc5A6o0l/view?usp=drivesdk" target="_blank" rel="noopener" data-k="v_full">Watch the full video on Google Drive</a></div>
+          </article>
+          <article class="vid">
+            <video controls preload="none" playsinline poster="clips/use-case-discovery.jpg" src="clips/use-case-discovery.mp4" aria-labelledby="t3"></video>
+            <h3 id="t3" data-k="v2_t">AI use case discovery</h3>
+            <p data-k="v2_d">How a use case discovery report and a prioritised scoring matrix are structured, shown in Google Docs and Sheets.</p>
+            <div class="meta"><span data-k="v_clip">First 90 seconds.</span> <a href="https://drive.google.com/file/d/15P_pUZWSiOCEr8rTBAKtd4CF6ajL0jPZ/view?usp=drivesdk" target="_blank" rel="noopener" data-k="v_full">Watch the full video on Google Drive</a></div>
+          </article>
+          <article class="vid">
+            <video controls preload="none" playsinline poster="clips/rag-agent.jpg" src="clips/rag-agent.mp4" aria-labelledby="t4"></video>
+            <h3 id="t4" data-k="v6_t">RAG agent with n8n</h3>
+            <p data-k="v6_d">An n8n workflow loads a PDF from Google Drive into a vector database, then a chat assistant answers questions from it.</p>
+            <div class="meta"><span data-k="v_clip">First 90 seconds.</span></div>
+          </article>
+        </div>
+        <p class="more"><span data-k="more_t">Also available:</span> <a href="https://drive.google.com/file/d/157qr4VGiSpfc8gx3LxesTSvcsB_iJOb2/view?usp=drivesdk" target="_blank" rel="noopener" data-k="more_l">the first part of the social media workflow demo, on Google Drive</a></p>
+      </div>
+    </section>
+
+    <section class="sec" id="results" aria-labelledby="h-res">
+      <h2 id="h-res" data-k="lab_res">Results</h2>
+      <div class="stats">
+        <div class="stat"><div class="num">5,000+</div><p data-k="rs1">Employees at the large enterprises Enterprise GPT is built for.</p></div>
+        <div class="stat"><div class="num">10+</div><p data-k="rs2">Businesses helped by social media automation.</p></div>
+        <div class="stat"><div class="num">2</div><p data-k="rs3">Languages, English and Arabic, in everything I build.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="projects" aria-labelledby="h-work">
+      <h2 id="h-work" data-k="lab_work">Selected work</h2>
+      <div>
+        <article class="proj">
+          <h3>UAE Seller Hub</h3>
+          <p data-k="p1_d">A free Amazon UAE profit calculator inside a seven page site, built with plain HTML, CSS and JavaScript and deployed on Vercel, with guides written for search.</p>
+          <div class="stack">HTML, CSS, JavaScript, Vercel, SEO</div>
+          <a href="https://uaesellerhub.com" target="_blank" rel="noopener" data-k="p1_link">Visit uaesellerhub.com</a>
+        </article>
+        <article class="proj">
+          <h3>Intra-Connect</h3>
+          <p data-k="p2_d">An HR assistant for large companies. Employees ask in plain language and get answers grounded in company documents, with voice replies. Comes with a marketing automation pipeline.</p>
+          <div class="stack">Next.js, TypeScript, Supabase pgvector, Cohere rerank, Azure AI Foundry, ElevenLabs, n8n</div>
+        </article>
+        <article class="proj">
+          <h3>Lakehouse Academy</h3>
+          <p data-k="p3_d">A coaching platform that walks learners through real tasks inside Databricks. A Chrome extension draws guidance on the live workspace, and the portal checks the result through the Databricks API.</p>
+          <div class="stack">Next.js, Chrome extension, Entra ID OAuth, Databricks REST API, Vercel</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec" id="dashboard" aria-labelledby="h-dash">
+      <h2 id="h-dash" data-k="lab_dash">Dashboard sample</h2>
+      <div class="panel">
+        <div class="panel-head">
+          <h3 data-k="d_title">Lead tracker for a property brokerage</h3>
+          <div class="note" data-k="d_note">Sample data. Not a real client.</div>
+        </div>
+        <div class="seg" id="seg" role="group" aria-label="Channel">
+          <button type="button" data-ch="all" aria-pressed="true" data-k="ch_all">All channels</button>
+          <button type="button" data-ch="web" aria-pressed="false" data-k="ch_web">Website</button>
+          <button type="button" data-ch="wa" aria-pressed="false" data-k="ch_wa">WhatsApp</button>
+          <button type="button" data-ch="portal" aria-pressed="false" data-k="ch_portal">Property portals</button>
+        </div>
+        <div class="board">
+          <div class="kpis">
+            <div class="kpi"><div class="k" data-k="k_leads">Leads, 8 weeks</div><div class="v" id="kLeads">0</div></div>
+            <div class="kpi"><div class="k" data-k="k_qual">Qualified</div><div class="v" id="kQual">0</div></div>
+            <div class="kpi"><div class="k" data-k="k_change">Last week vs first</div><div class="v" id="kChange">0</div></div>
+          </div>
+          <div>
+            <div class="chart">
+              <div class="chart-title" data-k="chart_title">Leads per week</div>
+              <div id="chart"></div>
+            </div>
+            <div class="chart-cap" data-k="chart_cap">Week</div>
+            <table class="sr-only" id="dataTable"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="process" aria-labelledby="h-proc">
+      <h2 id="h-proc" data-k="lab_process">How we work</h2>
+      <ol class="steps">
+        <li data-k="st1">A short call to agree the goal and scope.</li>
+        <li data-k="st2">A fixed price in AED and a start date.</li>
+        <li data-k="st3">A working first version for you to react to.</li>
+        <li data-k="st4">Launch, handover and a short guide for your team.</li>
+      </ol>
+    </section>
+
+    <section class="sec" id="skills" aria-labelledby="h-skills">
+      <h2 id="h-skills" data-k="lab_skills">Skills and platforms</h2>
+      <div class="skgs">
+        <div class="skg"><h3 data-k="sk1">Cloud</h3><ul><li>Microsoft Azure</li><li>Google Cloud (GCP)</li><li>Azure AI Foundry</li></ul></div>
+        <div class="skg"><h3 data-k="sk2">AI and automation</h3><ul><li>RAG assistants</li><li>n8n workflows</li><li>Cohere rerank</li><li>ElevenLabs voice</li></ul></div>
+        <div class="skg"><h3 data-k="sk3">Data and dashboards</h3><ul><li>Databricks</li><li>Power BI</li><li>Dashboards</li></ul></div>
+        <div class="skg"><h3 data-k="sk4">Websites and apps</h3><ul><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Vercel</li></ul></div>
+        <div class="skg"><h3 data-k="sk5">Security</h3><ul><li>ISO 27001 Lead Auditor</li><li>Palo Alto Prisma Cloud IAM</li><li>Cloud security</li></ul></div>
+      </div>
+    </section>
+
+    <section class="sec" id="faq" aria-labelledby="h-faq">
+      <h2 id="h-faq" data-k="lab_faq">Questions</h2>
+      <div class="faq">
+        <details><summary data-k="f1q">Do you work in Arabic?</summary><p data-k="f1a">Yes. I work in English and Arabic, and the assistants and websites I build answer in both.</p></details>
+        <details><summary data-k="f2q">How is pricing set?</summary><p data-k="f2a">A fixed price in AED, agreed on a short call before any work starts.</p></details>
+        <details><summary data-k="f3q">What do you need to start?</summary><p data-k="f3a">A few lines about your business and the problem. We agree the goal and scope on a short call.</p></details>
+        <details><summary data-k="f4q">Which cloud do you build on?</summary><p data-k="f4a">Azure or Google Cloud. If your team already uses one, I build there.</p></details>
+      </div>
+    </section>
+
+    <section class="sec about" id="about" aria-labelledby="h-about">
+      <h2 id="h-about" data-k="lab_about">About</h2>
+      <div>
+        <p data-k="about_p">I am a data and AI consultant in Dubai with a computer science degree from the University of Wollongong in Dubai. I work in English and Arabic, and I take on a small number of independent projects at a time.</p>
+        <p class="sub" data-k="about_p2">Particular interests: cloud security and data analysis.</p>
+        <h3 class="certs-h" data-k="cert_lab">Credentials</h3>
+        <ul class="certs">
+          <li>AZ-900 Azure Fundamentals</li>
+          <li>ISO 27001 Lead Auditor</li>
+          <li>Palo Alto Prisma Cloud IAM</li>
+          <li>Dubai Future Foundation, One Million Prompters</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec contact" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact" data-k="lab_contact">Contact</h2>
+      <div>
+        <h3 class="big" data-k="c_h">Tell me what you want to build or fix.</h3>
+        <p data-k="c_p">A few lines about your business and the problem are enough to start.</p>
+        <div class="mail-row">
+          <span class="mail" id="mail">masaarar6@gmail.com</span>
+          <button class="copy" id="copyBtn" type="button" data-k="c_copy">Copy</button>
+        </div>
+        <a class="li" href="tel:+971504383886" dir="ltr" style="display:inline-flex;align-items:center;min-height:44px;margin-inline-end:20px">+971 50 438 3886</a>
+        <a class="li" href="https://www.linkedin.com/in/masah-arar" target="_blank" rel="noopener" data-k="c_li">LinkedIn</a>
+      </div>
+    </section>
+    </main>
+
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+    <footer class="foot" data-k="foot">Masah Arar, Dubai, UAE</footer>
+  </div>
+</div>
+
+<script>
+  var I18N = {
+    en: {
+      skip: 'Skip to content',
+      nav_work: 'Work', nav_contact: 'Contact', lang_btn: 'العربية',
+      eyebrow: 'Dubai, UAE. English and Arabic.',
+      h1: 'AI assistants, dashboards and websites for UAE businesses.',
+      lede: 'I build working software: an assistant that answers customers in English and Arabic, a dashboard that shows owners what is happening, and a website that brings in leads.',
+      btn_work: 'See the work', btn_contact: 'Get in touch',
+      tools: 'Works with Azure, Google Cloud, Databricks, Power BI, Next.js, n8n and Supabase.',
+      v6_t: 'RAG agent with n8n',
+      v6_d: 'An n8n workflow loads a PDF from Google Drive into a vector database, then a chat assistant answers questions from it.',
+      lab_services: 'What I build',
+      s1_t: 'Bilingual AI assistants',
+      s1_d: 'Answer customer questions in English and Arabic on your website or WhatsApp, take bookings, and pass real leads to your team. Built on Azure AI Foundry, with answers cited from your own documents.',
+      s1_f: 'Suits property agents, clinics, salons and restaurants.',
+      s2_t: 'Workflow automation with n8n',
+      s2_d: 'Workflows that start when content, messages or form entries arrive, call an AI model, and write the result back into your tools, so nothing gets re-typed.',
+      s2_f: 'Suits teams that copy the same data between tools every day.',
+      s3_t: 'Dashboards and reporting',
+      s3_d: 'Power BI or web dashboards that bring sales, leads or operations data onto one screen your team can check each morning.',
+      s3_f: 'Suits trading, logistics, retail and food and beverage.',
+      s4_t: 'Websites that bring in leads',
+      s4_d: 'Fast bilingual websites with a clear offer, lead capture and search basics, deployed and handed over.',
+      s4_f: 'Suits small firms that need a site that works.',
+      lab_demos: 'Demo videos',
+      v_clip: 'First 90 seconds.',
+      v_full: 'Watch the full video on Google Drive',
+      v_whole: 'Full video, 1 minute 13 seconds.',
+      v1_t: 'Intra-Connect marketing pipeline',
+      v1_d: 'An enterprise assistant that runs a marketing pipeline from chat: it writes the post and image, waits for approval, then publishes.',
+      v5_t: 'Vehicle defect diagnosis agent',
+      v5_d: 'Upload a photo of a damaged vehicle and get a diagnosis with cited fix steps, drawn from a document knowledge base.',
+      v2_t: 'AI use case discovery',
+      v2_d: 'How a use case discovery report and a prioritised scoring matrix are structured, shown in Google Docs and Sheets.',
+      v4_t: 'Social media workflow in n8n',
+      v4_d: 'An n8n workflow that drafts social posts with an AI model, asks for approval, then publishes to Instagram and Facebook.',
+      more_t: 'Also available:',
+      more_l: 'the first part of the social media workflow demo, on Google Drive',
+      lab_work: 'Selected work',
+      p1_d: 'A free Amazon UAE profit calculator inside a seven page site, built with plain HTML, CSS and JavaScript and deployed on Vercel, with guides written for search.',
+      p1_link: 'Visit uaesellerhub.com',
+      p2_d: 'An HR assistant for large companies. Employees ask in plain language and get answers grounded in company documents, with voice replies. Comes with a marketing automation pipeline.',
+      p3_d: 'A coaching platform that walks learners through real tasks inside Databricks. A Chrome extension draws guidance on the live workspace, and the portal checks the result through the Databricks API.',
+      lab_dash: 'Dashboard sample',
+      d_title: 'Lead tracker for a property brokerage',
+      d_note: 'Sample data. Not a real client.',
+      ch_all: 'All channels', ch_web: 'Website', ch_wa: 'WhatsApp', ch_portal: 'Property portals',
+      k_leads: 'Leads, 8 weeks', k_qual: 'Qualified', k_change: 'Last week vs first',
+      chart_title: 'Leads per week', chart_cap: 'Week',
+      lab_process: 'How we work',
+      st1: 'A short call to agree the goal and scope.',
+      st2: 'A fixed price in AED and a start date.',
+      st3: 'A working first version for you to react to.',
+      st4: 'Launch, handover and a short guide for your team.',
+      lab_about: 'About',
+      about_p: 'I am a data and AI consultant in Dubai with a computer science degree from the University of Wollongong in Dubai. I work in English and Arabic, and I take on a small number of independent projects at a time.',
+      about_p2: 'Particular interests: cloud security and data analysis.',
+      cert_lab: 'Credentials',
+      lab_contact: 'Contact',
+      c_h: 'Tell me what you want to build or fix.',
+      c_p: 'A few lines about your business and the problem are enough to start.',
+      c_copy: 'Copy', c_copied: 'Copied', c_li: 'LinkedIn',
+      lab_prob: 'Sound familiar?',
+      pr1_t: 'Customers message at night and nobody replies.', pr1_d: 'A bilingual AI assistant answers in English and Arabic around the clock and passes real leads to your team.',
+      pr2_t: 'Your team copies the same data between tools every day.', pr2_d: 'An n8n workflow moves it for you and writes the result back into the tools you already use.',
+      pr3_t: 'You rebuild the same report by hand every week.', pr3_d: 'A dashboard puts sales, leads or operations on one screen that updates itself.',
+      pr4_t: 'Your website looks fine but brings no enquiries.', pr4_d: 'A fast bilingual site with a clear offer and lead capture turns visitors into messages.',
+      pr_link: 'See the fix', pr_link2: 'See the fix', pr_link3: 'See the fix', pr_link4: 'See the fix',
+      lab_res: 'Results',
+      rs1: 'Employees at the large enterprises Enterprise GPT is built for.', rs2: 'Businesses helped by social media automation.', rs3: 'Languages, English and Arabic, in everything I build.',
+      lab_skills: 'Skills and platforms', sk1: 'Cloud', sk2: 'AI and automation', sk3: 'Data and dashboards', sk4: 'Websites and apps', sk5: 'Security',
+      lab_faq: 'Questions',
+      f1q: 'Do you work in Arabic?', f1a: 'Yes. I work in English and Arabic, and the assistants and websites I build answer in both.',
+      f2q: 'How is pricing set?', f2a: 'A fixed price in AED, agreed on a short call before any work starts.',
+      f3q: 'What do you need to start?', f3a: 'A few lines about your business and the problem. We agree the goal and scope on a short call.',
+      f4q: 'Which cloud do you build on?', f4a: 'Azure or Google Cloud. If your team already uses one, I build there.',
+      foot: 'Masah Arar, Dubai, UAE',
+    },
+    ar: {
+      skip: 'انتقل إلى المحتوى',
+      nav_work: 'الأعمال', nav_contact: 'التواصل', lang_btn: 'English',
+      eyebrow: 'دبي، الإمارات. بالعربية والإنجليزية.',
+      h1: 'مساعدون بالذكاء الاصطناعي ولوحات بيانات ومواقع إلكترونية للشركات في الإمارات.',
+      lede: 'أبني برمجيات تعمل فعلاً: مساعد يجيب العملاء بالعربية والإنجليزية، ولوحة بيانات تُظهر لصاحب العمل ما يحدث، وموقع يجلب العملاء المحتملين.',
+      btn_work: 'شاهد الأعمال', btn_contact: 'تواصل معي',
+      tools: 'أعمل مع Azure وGoogle Cloud وDatabricks وPower BI وNext.js وn8n وSupabase.',
+      v6_t: 'وكيل RAG مع n8n',
+      v6_d: 'مسار في n8n يحمّل ملف PDF من Google Drive إلى قاعدة بيانات متجهات، ثم يجيب مساعد محادثة عن الأسئلة منها.',
+      lab_services: 'ما أبنيه',
+      s1_t: 'مساعدون ذكيون بلغتين',
+      s1_d: 'يجيبون عن أسئلة العملاء بالعربية والإنجليزية على موقعك أو واتساب، ويحجزون المواعيد، ويحوّلون العملاء الجادين إلى فريقك. مبنيون على Azure AI Foundry، وإجاباتهم موثقة من مستنداتك.',
+      s1_f: 'مناسب للوسطاء العقاريين والعيادات والصالونات والمطاعم.',
+      s2_t: 'أتمتة سير العمل مع n8n',
+      s2_d: 'مسارات تبدأ عند وصول محتوى أو رسائل أو نماذج جديدة، وتستدعي نموذج ذكاء اصطناعي، وتكتب النتيجة في أدواتك، فلا يعاد إدخال شيء يدوياً.',
+      s2_f: 'مناسب للفرق التي تنسخ البيانات نفسها بين الأدوات كل يوم.',
+      s3_t: 'لوحات البيانات والتقارير',
+      s3_d: 'لوحات في Power BI أو على الويب تجمع بيانات المبيعات أو العملاء المحتملين أو التشغيل في شاشة واحدة يراجعها فريقك كل صباح.',
+      s3_f: 'مناسب للتجارة والخدمات اللوجستية والتجزئة والأغذية والمشروبات.',
+      s4_t: 'مواقع تجلب العملاء',
+      s4_d: 'مواقع سريعة بلغتين، بعرض واضح ونموذج لجمع بيانات العملاء وأساسيات الظهور في محركات البحث، مع النشر والتسليم.',
+      s4_f: 'مناسب للشركات الصغيرة التي تحتاج موقعاً يعمل فعلاً.',
+      lab_demos: 'فيديوهات العرض',
+      v_clip: 'أول 90 ثانية.',
+      v_full: 'شاهد الفيديو كاملاً على Google Drive',
+      v_whole: 'الفيديو كاملاً، دقيقة و13 ثانية.',
+      v1_t: 'مسار التسويق في Intra-Connect',
+      v1_d: 'مساعد مؤسسي يدير مسار تسويق من المحادثة: يكتب المنشور والصورة، وينتظر الموافقة، ثم ينشر.',
+      v5_t: 'وكيل تشخيص أعطال المركبات',
+      v5_d: 'ارفع صورة لمركبة متضررة واحصل على تشخيص مع خطوات إصلاح موثقة بمصادرها، من قاعدة معرفة مبنية على مستندات.',
+      v2_t: 'اكتشاف حالات استخدام الذكاء الاصطناعي',
+      v2_d: 'كيف يُبنى تقرير اكتشاف حالات الاستخدام ومصفوفة تقييم الأولويات، في Google Docs وSheets.',
+      v4_t: 'مسار وسائل التواصل في n8n',
+      v4_d: 'مسار في n8n يكتب منشورات بنموذج ذكاء اصطناعي، ويطلب الموافقة، ثم ينشر على إنستغرام وفيسبوك.',
+      more_t: 'متاح أيضاً:',
+      more_l: 'الجزء الأول من عرض مسار وسائل التواصل، على Google Drive',
+      lab_work: 'أعمال مختارة',
+      p1_d: 'حاسبة مجانية لأرباح البيع على أمازون الإمارات ضمن موقع من سبع صفحات، مبني بـ HTML وCSS وJavaScript ومنشور على Vercel، مع أدلة مكتوبة لمحركات البحث.',
+      p1_link: 'زيارة uaesellerhub.com',
+      p2_d: 'مساعد للموارد البشرية في الشركات الكبرى. يسأل الموظفون بلغتهم العادية ويحصلون على إجابات مبنية على مستندات الشركة، مع ردود صوتية. ويأتي مع مسار أتمتة للتسويق.',
+      p3_d: 'منصة تدريب ترشد المتعلمين خلال مهام حقيقية داخل Databricks. إضافة لمتصفح Chrome ترسم الإرشادات فوق بيئة العمل الفعلية، وتتحقق البوابة من النتيجة عبر واجهة Databricks البرمجية.',
+      lab_dash: 'نموذج لوحة بيانات',
+      d_title: 'متابعة العملاء المحتملين لشركة وساطة عقارية',
+      d_note: 'بيانات تجريبية. ليست لعميل حقيقي.',
+      ch_all: 'كل القنوات', ch_web: 'الموقع', ch_wa: 'واتساب', ch_portal: 'بوابات العقارات',
+      k_leads: 'العملاء المحتملون، 8 أسابيع', k_qual: 'المؤهلون', k_change: 'الأسبوع الأخير مقابل الأول',
+      chart_title: 'العملاء المحتملون أسبوعياً', chart_cap: 'الأسبوع',
+      lab_process: 'طريقة العمل',
+      st1: 'مكالمة قصيرة لتحديد الهدف والنطاق.',
+      st2: 'سعر ثابت بالدرهم وتاريخ بدء.',
+      st3: 'نسخة أولى تعمل لتبدي رأيك فيها.',
+      st4: 'الإطلاق والتسليم ودليل قصير لفريقك.',
+      lab_about: 'نبذة',
+      about_p: 'أعمل في مجال البيانات والذكاء الاصطناعي في دبي، وأحمل شهادة في علوم الحاسب من جامعة ولونغونغ في دبي. أعمل بالعربية والإنجليزية، وأقبل عدداً محدوداً من المشاريع المستقلة في الوقت نفسه.',
+      about_p2: 'اهتماماتي الخاصة: أمن السحابة وتحليل البيانات.',
+      cert_lab: 'الشهادات',
+      lab_contact: 'التواصل',
+      c_h: 'أخبرني بما تريد بناءه أو إصلاحه.',
+      c_p: 'يكفي بضعة أسطر عن عملك والمشكلة لنبدأ.',
+      c_copy: 'نسخ', c_copied: 'تم النسخ', c_li: 'لينكدإن',
+      lab_prob: 'هل هذا مألوف؟',
+      pr1_t: 'عملاؤك يراسلونك ليلاً ولا أحد يرد.', pr1_d: 'مساعد ذكاء اصطناعي ثنائي اللغة يجيب بالعربية والإنجليزية على مدار الساعة ويمرّر العملاء الجادين إلى فريقك.',
+      pr2_t: 'فريقك ينسخ البيانات نفسها بين الأدوات كل يوم.', pr2_d: 'سير عمل في n8n ينقلها عنك ويكتب النتيجة في الأدوات التي تستخدمها أصلاً.',
+      pr3_t: 'تعيد بناء التقرير نفسه يدوياً كل أسبوع.', pr3_d: 'لوحة تعرض المبيعات أو العملاء المحتملين أو العمليات في شاشة واحدة تتحدث تلقائياً.',
+      pr4_t: 'موقعك يبدو جيداً لكنه لا يجلب استفسارات.', pr4_d: 'موقع سريع بلغتين مع عرض واضح ونموذج تواصل يحوّل الزوار إلى رسائل.',
+      pr_link: 'شاهد الحل', pr_link2: 'شاهد الحل', pr_link3: 'شاهد الحل', pr_link4: 'شاهد الحل',
+      lab_res: 'النتائج',
+      rs1: 'موظف في المؤسسات الكبرى التي صُمم Enterprise GPT لها.', rs2: 'شركة استفادت من أتمتة وسائل التواصل الاجتماعي.', rs3: 'لغتان، العربية والإنجليزية، في كل ما أبنيه.',
+      lab_skills: 'المهارات والمنصات', sk1: 'السحابة', sk2: 'الذكاء الاصطناعي والأتمتة', sk3: 'البيانات ولوحات التقارير', sk4: 'المواقع والتطبيقات', sk5: 'الأمن',
+      lab_faq: 'أسئلة',
+      f1q: 'هل تعمل بالعربية؟', f1a: 'نعم. أعمل بالعربية والإنجليزية، والمساعدات والمواقع التي أبنيها تجيب باللغتين.',
+      f2q: 'كيف يُحدد السعر؟', f2a: 'سعر ثابت بالدرهم نتفق عليه في مكالمة قصيرة قبل بدء أي عمل.',
+      f3q: 'ماذا تحتاج لتبدأ؟', f3a: 'بضعة أسطر عن عملك والمشكلة. نتفق على الهدف والنطاق في مكالمة قصيرة.',
+      f4q: 'على أي سحابة تبني؟', f4a: 'Azure أو Google Cloud. وإذا كان فريقك يستخدم إحداهما فأبني عليها.',
+      foot: 'Masah Arar، دبي، الإمارات',
+    }
+  };
+
+  /* Sample data: weekly leads per channel, and the share of leads that qualified. */
+  var DATA = {
+    web:    [34, 38, 41, 45, 43, 52, 58, 61],
+    wa:     [22, 27, 31, 36, 44, 49, 57, 66],
+    portal: [48, 44, 46, 41, 43, 40, 39, 37]
+  };
+  var QUAL = { web: 0.31, wa: 0.42, portal: 0.22 };
+
+  var lang = 'en';
+  var chan = 'all';
+
+  function t(k) { return I18N[lang][k]; }
+  function sum(a) { return a.reduce(function (s, v) { return s + v; }, 0); }
+  function series(c) {
+    if (c === 'all') return DATA.web.map(function (_, i) { return DATA.web[i] + DATA.wa[i] + DATA.portal[i]; });
+    return DATA[c];
+  }
+  function qualified(c) {
+    if (c === 'all') return Object.keys(DATA).reduce(function (s, k) { return s + sum(DATA[k]) * QUAL[k]; }, 0);
+    return sum(DATA[c]) * QUAL[c];
+  }
+
+  function drawChart(s) {
+    var W = 520, H = 260, L = 38, R = 8, T = 26, B = 28;
+    var max = Math.max.apply(null, s);
+    var steps = [10, 20, 25, 50, 100, 200];
+    var step = 200;
+    for (var i = 0; i < steps.length; i++) { if (Math.ceil(max / steps[i]) <= 5) { step = steps[i]; break; } }
+    var top = Math.ceil(max / step) * step;
+    function y(v) { return (T + (H - T - B) * (1 - v / top)).toFixed(1); }
+    var slot = (W - L - R) / s.length;
+    var bw = slot * 0.58;
+    var g = '';
+    for (var v = 0; v <= top; v += step) {
+      g += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v) + '" y2="' + y(v) + '"/>' +
+           '<text class="ax" x="' + (L - 7) + '" y="' + (parseFloat(y(v)) + 4) + '" text-anchor="end">' + v + '</text>';
+    }
+    s.forEach(function (val, idx) {
+      var x = L + slot * idx + (slot - bw) / 2;
+      var last = idx === s.length - 1;
+      g += '<rect class="bar' + (last ? ' last' : '') + '" x="' + x.toFixed(1) + '" y="' + y(val) + '" width="' + bw.toFixed(1) + '" height="' + (y(0) - y(val)).toFixed(1) + '"/>' +
+           '<text class="ax" x="' + (x + bw / 2).toFixed(1) + '" y="' + (H - 9) + '" text-anchor="middle">' + (idx + 1) + '</text>';
+      if (last) g += '<text class="val" x="' + (x + bw / 2).toFixed(1) + '" y="' + (parseFloat(y(val)) - 7) + '" text-anchor="middle">' + val + '</text>';
+    });
+    var label = t('chart_title') + ': ' + s.join(', ');
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + label + '">' + g + '</svg>';
+  }
+
+  function renderDash() {
+    var s = series(chan);
+    var leads = sum(s);
+    var q = Math.round(qualified(chan));
+    var pct = Math.round(q / leads * 100);
+    var change = Math.round((s[s.length - 1] - s[0]) / s[0] * 100);
+    document.getElementById('kLeads').textContent = leads;
+    document.getElementById('kQual').innerHTML = q + ' <small>(' + pct + '%)</small>';
+    var kc = document.getElementById('kChange');
+    kc.textContent = (change > 0 ? '+' : '') + change + '%';
+    kc.className = 'v ' + (change >= 0 ? 'up' : 'down');
+    document.getElementById('chart').innerHTML = drawChart(s);
+    var rows = s.map(function (v, i) { return '<tr><th scope="row">' + (i + 1) + '</th><td>' + v + '</td></tr>'; }).join('');
+    document.getElementById('dataTable').innerHTML = '<caption>' + t('chart_title') + '</caption><thead><tr><th scope="col">' + t('chart_cap') + '</th><th scope="col">' + t('chart_title') + '</th></tr></thead><tbody>' + rows + '</tbody>';
+    document.querySelectorAll('#seg button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.dataset.ch === chan ? 'true' : 'false');
+    });
+  }
+
+  function applyLang() {
+    var app = document.getElementById('app');
+    app.lang = lang;
+    app.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-k]').forEach(function (el) { el.textContent = t(el.dataset.k); });
+    document.getElementById('langBtn').textContent = t('lang_btn');
+    document.querySelectorAll('[data-k-ph]').forEach(function (el) { el.placeholder = t(el.dataset.kPh); });
+    renderDash();
+    try { localStorage.setItem('portfolio-lang', lang); } catch (e) {}
+  }
+
+  document.getElementById('langBtn').addEventListener('click', function () {
+    lang = lang === 'en' ? 'ar' : 'en';
+    applyLang();
+  });
+
+  document.getElementById('seg').addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    chan = b.dataset.ch;
+    renderDash();
+  });
+
+  document.getElementById('copyBtn').addEventListener('click', function () {
+    var btn = this;
+    var el = document.getElementById('mail');
+    function done() {
+      btn.textContent = t('c_copied');
+      setTimeout(function () { btn.textContent = t('c_copy'); }, 1600);
+    }
+    function selectText() {
+      var r = document.createRange();
+      r.selectNodeContents(el);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(r);
+    }
+    try {
+      navigator.clipboard.writeText(el.textContent).then(done, selectText);
+    } catch (e) { selectText(); }
+  });
+
+
+  document.getElementById('app').classList.add('js');
+  (function () {
+    var els = document.querySelectorAll('main section:not(.hero) .wrap > *, main section:not(.hero) > *');
+    if (!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('main section:not(.hero) h2, main section:not(.hero) .svc, main section:not(.hero) .vid, main section:not(.hero) .proj, main section:not(.hero) .steps li, main section:not(.hero) .prob, main section:not(.hero) .stat, main section:not(.hero) .skg, main section:not(.hero) .faq details, main section:not(.hero) .dash').forEach(function (el) { el.classList.add('rv'); io.observe(el); });
+  })();
+
+  (function () {
+    var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var bar = document.getElementById('progress'), stage = document.querySelector('.hero .stage'), tick = false;
+    document.querySelectorAll('.svc, .vid, .proj, .steps li, .prob, .stat, .skg').forEach(function (el) {
+      var sibs = el.parentNode.children, i = Array.prototype.indexOf.call(sibs, el);
+      el.style.setProperty('--d', (i % 4) * 0.08 + 's');
+      if (el.classList.contains('proj')) el.classList.add(i % 2 ? 'from-r' : 'from-l');
+    });
+    if (rm) return;
+    function upd() {
+      tick = false;
+      var h = document.documentElement.scrollHeight - innerHeight, y = window.pageYOffset;
+      bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0) + ')';
+      if (stage && y < 900) stage.style.transform = 'translateY(' + (y * -0.06).toFixed(1) + 'px)';
+    }
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(upd); } }, { passive: true });
+    upd();
+  })();
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a || a.getAttribute('href').length < 2) return;
+    var target = document.getElementById(a.getAttribute('href').slice(1));
+    if (!target) return;
+    e.preventDefault();
+    var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var y = target.getBoundingClientRect().top + window.pageYOffset - 16;
+    var start = window.pageYOffset, dist = y - start, t0 = null, dur = Math.min(1100, 450 + Math.abs(dist) * 0.25);
+    function done() { target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true }); }
+    if (rm || !window.requestAnimationFrame) { window.scrollTo(0, y); done(); return; }
+    function ease(k) { return k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; }
+    function step(ts) {
+      if (t0 === null) t0 = ts;
+      var k = Math.min(1, (ts - t0) / dur);
+      window.scrollTo(0, start + dist * ease(k));
+      if (k < 1) requestAnimationFrame(step); else done();
+    }
+    requestAnimationFrame(step);
+  });
+
+  try {
+    var saved = localStorage.getItem('portfolio-lang');
+    if (saved === 'ar' || saved === 'en') lang = saved;
+  } catch (e) {}
+  if (location.hash === '#ar') lang = 'ar';
+  applyLang();
+</script>
+
+</body>
+</html>
